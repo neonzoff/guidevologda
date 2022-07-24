@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    generate-ddl: true
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/guidevologda}
+    username: ${JDBC_DATABASE_USERNAME:postgres}
+    password: ${JDBC_DATABASE_USERNAME:root}
+server:
+  port: 8080
+
+yandex:
+  url: https://geocode-maps.yandex.ru/1.x/?
+  geocoder: api-key
+
+cloud:
+  aws:
+    region:
+      static: storage.yandexcloud.net
+    stack:
+      auto: false
